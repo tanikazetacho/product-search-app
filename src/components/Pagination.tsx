@@ -8,14 +8,13 @@ type PaginationProps = {
   onPrev: () => void
 }
 
-const Pagination = (
-  {
-    currentPage,
-    hasNext,
-    hasPrev,
-    onNext,
-    onPrev
-  }: PaginationProps) => {
+const Pagination = ({
+  currentPage,
+  hasNext,
+  hasPrev,
+  onNext,
+  onPrev
+}: PaginationProps) => {
   return (
     <div className="flex items-center justify-center gap-4 mt-4">
       <button

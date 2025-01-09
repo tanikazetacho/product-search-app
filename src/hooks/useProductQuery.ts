@@ -10,14 +10,13 @@ interface UseProductQueryParams {
   skip?: boolean
 }
 
-const useProductQuery = (
-  {
-    search,
-    store,
-    currentPage,
-    pageSize,
-    skip
-  }: UseProductQueryParams) => {
+const useProductQuery = ({
+  search,
+  store,
+  currentPage,
+  pageSize,
+  skip
+}: UseProductQueryParams) => {
   const [variables, setVariables] = useState({
     search,
     store,

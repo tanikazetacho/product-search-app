@@ -1,16 +1,17 @@
-"use client"
+'use client'
 
 import { Suspense, useState } from 'react'
-import useUrlState from "@/hooks/useUrlState"
-import useProductQuery from "@/hooks/useProductQuery"
-import SearchBar from "@/components/SearchBar"
-import ProductListing from "@/components/ProductListing"
-import Pagination from "@/components/Pagination"
-import ErrorMessage from "@/components/ErrorMessage"
-import Image from "next/image"
+import useUrlState from '@/hooks/useUrlState'
+import useProductQuery from '@/hooks/useProductQuery'
+import SearchBar from '@/components/SearchBar'
+import ProductListing from '@/components/ProductListing'
+import Pagination from '@/components/Pagination'
+import ErrorMessage from '@/components/ErrorMessage'
+import Image from 'next/image'
 
 const HomePageContent = () => {
-  const { search, setSearch, store, setStore, currentPage, setCurrentPage } = useUrlState()
+  const { search, setSearch, store, setStore, currentPage, setCurrentPage } =
+    useUrlState()
   // this param is not used beacuse all the products are fetched at set 16 per
   const pageSize = 6
 
@@ -61,7 +62,9 @@ const HomePageContent = () => {
       {hasSearched && error && <ErrorMessage message={error.message} />}
 
       {hasSearched && !loading && products.length === 0 && (
-        <ErrorMessage message={"No se encontraron productos para tu búsqueda."} />
+        <ErrorMessage
+          message={'No se encontraron productos para tu búsqueda.'}
+        />
       )}
 
       {hasSearched && !loading && products.length > 0 && (

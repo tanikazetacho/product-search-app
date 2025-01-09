@@ -14,24 +14,30 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
   }
 
   return (
-    <form onSubmit={handleSearch} className="flex gap-4 mb-2.5">
+    <form
+      onSubmit={handleSearch}
+      className="flex flex-col sm:flex-row sm:gap-4 gap-2 mb-4 w-full"
+    >
       <input
         type="text"
         placeholder="Buscar productos..."
         value={term}
         onChange={(e) => setTerm(e.target.value)}
-        className="p-2 border rounded"
+        className="p-2 border rounded w-full sm:w-auto"
       />
       <select
         value={store}
         onChange={(e) => setStore(e.target.value)}
-        className="p-2 border rounded"
+        className="p-2 border rounded w-full sm:w-auto"
       >
         <option value="amazon">Amazon</option>
         <option value="ebay">Ebay</option>
         <option value="target">Target</option>
       </select>
-      <button type="submit" className="p-2 bg-blue-500 text-white rounded">
+      <button
+        type="submit"
+        className="p-2 bg-blue-500 text-white rounded w-full sm:w-auto"
+      >
         Buscar
       </button>
     </form>

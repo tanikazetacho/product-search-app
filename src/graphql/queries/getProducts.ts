@@ -31,8 +31,8 @@ export const GET_PRODUCTS = gql`
               currency
             }
             discount {
-                amount_off
-                percent_off
+              amount_off
+              percent_off
             }
           }
         }

@@ -23,15 +23,22 @@ type ProductCardProps = {
 }
 
 const formatToMXN = (amount: number): string => {
-  return new Intl.NumberFormat("es-MX", {
-    style: "currency",
-    currency: "MXN",
+  return new Intl.NumberFormat('es-MX', {
+    style: 'currency',
+    currency: 'MXN',
     minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
+    maximumFractionDigits: 2
   }).format(amount)
 }
 
-const ProductCard = ({ id, name, image, priceFinal, priceRegular, discount }: ProductCardProps) => {
+const ProductCard = ({
+  id,
+  name,
+  image,
+  priceFinal,
+  priceRegular,
+  discount
+}: ProductCardProps) => {
   return (
     <div
       key={id}
