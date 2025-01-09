@@ -11,7 +11,12 @@ Este es un proyecto de búsqueda de productos que utiliza **Next.js**, **Tailwin
 
 ---
 
+### 🚀 Despliegue en Vercel
+
+Accede a la aplicación desplegada [aqui](https://product-search-app-k1vw.vercel.app/ "Haz clic para ver la aplicación")
+
 ## ⚙️ Instalación
+
 
 1. **Clonar el repositorio**
 
