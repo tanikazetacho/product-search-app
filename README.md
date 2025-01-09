@@ -16,7 +16,7 @@ Este es un proyecto de búsqueda de productos que utiliza **Next.js**, **Tailwin
 1. **Clonar el repositorio**
 
    ```bash
-   git clone ""
+   git clone "git@github.com:tanikazetacho/product-search-app.git"
    cd product-search-app
    ```
 
