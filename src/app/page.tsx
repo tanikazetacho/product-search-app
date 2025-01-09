@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { Suspense, useState } from 'react'
 import useUrlState from "@/hooks/useUrlState"
 import useProductQuery from "@/hooks/useProductQuery"
 import SearchBar from "@/components/SearchBar"
@@ -80,4 +80,10 @@ const HomePageContent = () => {
   )
 }
 
-export default HomePageContent;
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Cargando página...</div>}>
+      <HomePageContent />
+    </Suspense>
+  )
+}
